@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dheeraj Kumar | Full Stack Architect</title>
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body class="bg-[#020617] text-slate-100 overflow-hidden font-mono antialiased selection:bg-cyan-500/30">
+
+    <!-- WebGL Background Canvas for Three.js -->
+    <canvas id="webgl-canvas" class="fixed top-0 left-0 w-full h-full -z-10 focus:outline-none"></canvas>
+
+    <!-- Global Sci-Fi HUD Borders and Telemetry -->
+    <div class="pointer-events-none fixed inset-0 border border-cyan-500/10 m-4 flex flex-col justify-between p-4 z-40">
+        <div class="flex justify-between items-start">
+            <div>
+                <h1 class="text-cyan-400 font-bold tracking-widest text-sm uppercase">CORE_SYS: DHEERAJ_KUMAR // v5.2</h1>
+                <p class="text-[10px] text-slate-500">STATUS: OPERATIONAL // AGENT_MODE: CLAUDE_CERTIFIED</p>
+            </div>
+            <div class="text-right text-[10px] text-slate-400 pointer-events-auto bg-slate-950/80 p-2 border border-slate-800 rounded">
+                <p>LATENCY: 18ms // LOC: Hazaribagh, IN</p>
+                <p id="live-clock">TIMESTAMP: LOADING...</p>
+            </div>
+        </div>
+        <div class="flex justify-between items-end">
+            <div class="text-[10px] text-slate-500">
+                <p>EMAIL: dheerajzxx@gmail.com</p>
+                <p>PHONE: +91 6200893152</p>
+            </div>
+            <div class="text-right">
+                <a href="https://linkedin.com" target="_blank" class="pointer-events-auto text-[10px] text-cyan-400 hover:text-cyan-300 underline tracking-wider">CONNECT_VIA_LINKEDIN ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN INTERACTIVE HUD LAYER -->
+    <main class="relative z-30 min-h-screen w-full flex flex-col justify-between items-center p-6">
+        
+        <div class="w-full flex flex-col md:flex-row justify-between gap-6 items-start mt-16 px-4">
+            <!-- Left Wing: Experience Panel -->
+            <section id="experience-panel" class="w-full md:w-80 panel-glass p-4 border border-slate-800 rounded-lg">
+                <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span> EXECUTIVE_SUMMARY
+                </h2>
+                <div class="space-y-3 text-[11px] text-slate-400 leading-relaxed">
+                    <p>
+                        <strong class="text-slate-200">Full Stack Developer (5+ Years Experience)</strong> specialized in shipping secure web applications, PWAs, custom dashboards, and high-throughput APIs.
+                    </p>
+                    <p class="border-t border-slate-800 pt-2">
+                        <span class="text-cyan-300 block font-semibold mb-1">PROVEN VERTICALS:</span>
+                        E-Commerce, Government, Healthcare, Events, Logistics & Education.
+                    </p>
+                    <div class="bg-cyan-950/20 p-2 border-l-2 border-cyan-500 rounded text-[10px] text-slate-300 mt-2">
+                        <span class="text-cyan-400 font-bold block">🤖 AI-ASSISTED DEVELOPMENT:</span>
+                        Certified AI Coder (Claude Code & Agents). Integrates rigorous unit testing & real API isolation workflows to ensure zero-regression, production-ready builds.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Wing: Comprehensive Technical Stack Matrix -->
+            <section id="tech-panel" class="w-full md:w-85 panel-glass p-4 border border-slate-800 rounded-lg">
+                <h2 class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-3">TECH_MATRIX_BLUEPRINT</h2>
+                <div class="space-y-3 text-[10px]">
+                    <div>
+                        <span class="text-purple-300 block font-bold mb-1">BACKEND Engine</span>
+                        <p class="text-slate-400 bg-slate-900/60 p-1.5 border border-slate-800 rounded">Laravel (PHP), Node.js, Express.js, CodeIgniter, REST APIs</p>
+                    </div>
+                    <div>
+                        <span class="text-purple-300 block font-bold mb-1">FRONTEND Layer</span>
+                        <p class="text-slate-400 bg-slate-900/60 p-1.5 border border-slate-800 rounded">Vue.js, Nuxt.js, Next.js, React, TypeScript, Tailwind CSS, PWA</p>
+                    </div>
+                    <div>
+                        <span class="text-purple-300 block font-bold mb-1">DATABASE & INTEGRATIONS</span>
+                        <p class="text-slate-400 bg-slate-900/60 p-1.5 border border-slate-800 rounded">PostgreSQL, MySQL, Redis // Razorpay, Twilio, Google Maps, WebSockets (Socket.IO), Zoho CRM</p>
+                    </div>
+                    <div>
+                        <span class="text-purple-300 block font-bold mb-1">QUALITY TESTING Framework</span>
+                        <p class="text-slate-400 bg-slate-900/60 p-1.5 border border-slate-800 rounded">Jest, Supertest, Vitest, Playwright, Real API end-to-end scenarios</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Center Bottom Interface Console -->
+        <footer class="mt-auto w-full max-w-4xl text-center z-50 mb-4 px-4">
+            <p class="text-[9px] text-slate-500 uppercase tracking-widest mb-2">Initialize Sector Core Filters to Scan Live Deployments</p>
+            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                <button onclick="querySector('government')" class="hud-btn border-cyan-500/40 text-cyan-400">Gov Systems</button>
+                <button onclick="querySector('ecommerce')" class="hud-btn border-emerald-500/40 text-emerald-400">E-Commerce / Fin</button>
+                <button onclick="querySector('healthcare')" class="hud-btn border-purple-500/40 text-purple-400">Healthcare / AI</button>
+                <button onclick="querySector('events')" class="hud-btn border-amber-500/40 text-amber-400">Events & Culture</button>
+            </div>
+            
+            <!-- Interactive Live-Data Dynamic Terminal Viewer -->
+            <div id="terminal-viewer" class="panel-glass p-4 rounded-lg min-h-[140px] border border-slate-800 text-left transition-all duration-300">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-2 mb-2">
+                    <span class="text-[11px] text-slate-400 tracking-wider">TERMINAL://CONSOLE_OUTPUT</span>
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                </div>
+                <div id="terminal-content">
+                    <p class="text-xs text-cyan-400/70 font-mono text-center pt-4 animate-pulse">SYSTEM IDLE: Click an operational engine node above to map deployment structures.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Three.js Visual Frame Engine from Official CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.187.0/three.core.min.js" integrity="sha512-hpTczJBHkiQPaMCKS4tghJ3t0ILToAA5sQLnNKk8yT9HHQnYoRODoyJTq6mSPGx1ONaJHxBKAiX3qARH+rqTng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/engine.js"></script>
+    <script src="js/app1.js"></script>
+</body>
+</html>
