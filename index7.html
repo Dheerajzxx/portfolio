@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dheeraj Kumar — Full Stack Developer</title>
+    <meta name="description" content="Dheeraj Kumar is a full stack developer with 5+ years of experience building secure web applications, PWAs, dashboards and high-throughput APIs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style7.css">
+</head>
+<body>
+    <header class="top">
+        <div class="top-inner">
+            <a class="logo" href="#top">
+                <span class="logo-mark">DK</span>
+                <span class="logo-text">Dheeraj Kumar</span>
+            </a>
+            <nav class="nav" aria-label="Primary">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#stack">Stack</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="top-right">
+                <span class="live"><span class="live-dot" aria-hidden="true"></span>Available</span>
+                <span class="clock" id="top-clock">--:--</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="bento" id="top">
+        <section class="tile tile-hero">
+            <span class="eyebrow">Full stack developer <span aria-hidden="true">·</span> 5+ years</span>
+            <h1>I build web products that <em>hold up</em> in production.</h1>
+            <p>Secure web apps, PWAs, dashboards and high-throughput APIs — shipped for government portals, marketplaces, hospitals and mass-scale events.</p>
+            <div class="hero-actions">
+                <a class="btn" href="#work">See the work</a>
+                <button class="copy-btn" type="button" data-copy="dheerajzxx@gmail.com">
+                    <span class="copy-label">Copy email</span>
+                    <span class="copy-icon" aria-hidden="true">⧉</span>
+                </button>
+            </div>
+        </section>
+
+        <aside class="tile tile-profile">
+            <div class="profile-top">
+                <div class="avatar" aria-hidden="true">DK</div>
+                <span class="badge">Open to work</span>
+            </div>
+            <h2>Dheeraj Kumar</h2>
+            <p class="role">Full Stack Developer</p>
+            <dl class="profile-list">
+                <div><dt>Location</dt><dd>Hazaribagh, IN</dd></div>
+                <div><dt>Core stack</dt><dd>Laravel · Node · Next</dd></div>
+                <div><dt>Email</dt><dd><a href="mailto:dheerajzxx@gmail.com">dheerajzxx@gmail.com</a></dd></div>
+            </dl>
+            <div class="local-time">
+                <span>Local time (IST)</span>
+                <strong id="local-clock">--:--:--</strong>
+            </div>
+        </aside>
+
+        <div class="tile tile-stat stat-lime">
+            <span class="stat-label">Experience</span>
+            <strong class="stat-value">5<small>+</small></strong>
+            <span class="stat-note">years shipping</span>
+        </div>
+        <div class="tile tile-stat">
+            <span class="stat-label">Products</span>
+            <strong class="stat-value">12</strong>
+            <span class="stat-note">built &amp; maintained</span>
+        </div>
+        <div class="tile tile-stat stat-lilac">
+            <span class="stat-label">Industries</span>
+            <strong class="stat-value">4</strong>
+            <span class="stat-note">verticals served</span>
+        </div>
+        <div class="tile tile-stat stat-peach">
+            <span class="stat-label">Availability</span>
+            <strong class="stat-value stat-text">Open to work</strong>
+            <span class="stat-note">Full-time / select freelance</span>
+        </div>
+
+        <div class="tile tile-head" id="work">
+            <div>
+                <span class="kicker">01 / Work</span>
+                <h2>Selected work</h2>
+            </div>
+            <div class="filters" id="bento-filters" role="group" aria-label="Filter projects by sector">
+                <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter" type="button" data-filter="government" aria-pressed="false">Government</button>
+                <button class="filter" type="button" data-filter="ecommerce" aria-pressed="false">E-commerce</button>
+                <button class="filter" type="button" data-filter="healthcare" aria-pressed="false">Healthcare</button>
+                <button class="filter" type="button" data-filter="events" aria-pressed="false">Events</button>
+            </div>
+        </div>
+
+        <div class="contents" id="bento-work" aria-live="polite"></div>
+
+        <section class="tile tile-about" id="about">
+            <span class="kicker">02 / About</span>
+            <h2>Production software, not demos.</h2>
+            <p class="about-lede">I turn messy requirements into reliable, maintainable products — and care about clean APIs, tested flows and interfaces that stay fast.</p>
+            <p class="about-copy">My work sits across Laravel and Node.js on the backend, Vue, Nuxt, Next.js and React on the frontend, with PostgreSQL, MySQL and Redis underneath. I have shipped for e-commerce, government, healthcare, events, logistics and education teams.</p>
+        </section>
+
+        <aside class="tile tile-ai">
+            <span class="kicker">AI-assisted</span>
+            <h3>Certified AI coder.</h3>
+            <p>Working with Claude Code and agents, using rigorous unit testing and real API isolation workflows to keep builds zero-regression and production-ready.</p>
+            <span class="ai-tag">Claude Code · Agents</span>
+        </aside>
+
+        <div class="tile tile-head" id="stack">
+            <div>
+                <span class="kicker">03 / Stack</span>
+                <h2>Tools in rotation</h2>
+            </div>
+            <p class="head-note">A practical toolkit refined across five years of production work.</p>
+        </div>
+
+        <div class="contents" id="bento-stack"></div>
+
+        <section class="tile tile-contact" id="contact">
+            <div class="contact-left">
+                <span class="kicker">04 / Contact</span>
+                <h2>Let's build something that holds up.</h2>
+                <p>Open to full-time roles and selective freelance work. The fastest way to reach me is email.</p>
+            </div>
+            <div class="contact-right">
+                <a class="contact-email" href="mailto:dheerajzxx@gmail.com">dheerajzxx@gmail.com <span aria-hidden="true">↗</span></a>
+                <div class="contact-links">
+                    <a href="tel:+916200893152">+91 6200893152</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a>
+                    <span>Hazaribagh, India</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>© <span id="year">2026</span> Dheeraj Kumar</span>
+            <span>Bento edition · Vanilla HTML, CSS &amp; JS</span>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app7.js"></script>
+</body>
+</html>

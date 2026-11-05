@@ -11,7 +11,7 @@
 <body class="bg-[#020617] text-slate-100 overflow-hidden font-mono antialiased selection:bg-cyan-500/30">
 
     <!-- WebGL Background Canvas for Three.js -->
-    <canvas id="webgl-canvas" class="fixed top-0 left-0 w-full h-full -z-10 focus:outline-none"></canvas>
+    <canvas id="webgl-canvas" class="fixed top-0 left-0 w-full h-full z-0 focus:outline-none"></canvas>
 
     <!-- Global Sci-Fi HUD Borders and Telemetry -->
     <div class="pointer-events-none fixed inset-0 border border-cyan-500/10 m-4 flex flex-col justify-between p-4 z-40">
@@ -107,8 +107,18 @@
         </footer>
     </main>
 
-    <!-- Three.js Visual Frame Engine from Official CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.187.0/three.core.min.js" integrity="sha512-hpTczJBHkiQPaMCKS4tghJ3t0ILToAA5sQLnNKk8yT9HHQnYoRODoyJTq6mSPGx1ONaJHxBKAiX3qARH+rqTng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Three.js Visual Frame Engine as an ES module -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.min.js"
+        }
+    }
+    </script>
+    <script type="module">
+        import * as THREE from 'three';
+        window.THREE = THREE;
+    </script>
     <script src="js/engine.js"></script>
     <script src="js/app1.js"></script>
 </body>

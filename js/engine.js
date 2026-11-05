@@ -75,4 +75,8 @@ function handleViewportResize() {
 }
 
 // Initialise on load
-document.addEventListener('DOMContentLoaded', init30Environment => init3DEnvironment());
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init3DEnvironment);
+} else {
+    init3DEnvironment();
+}

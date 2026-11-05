@@ -1,7 +1,6 @@
 let scene, camera, renderer, systemNebula;
 let nodesArray = [];
-let raycaster = new THREE.Raycaster();
-let mouseVector = new THREE.Vector2();
+let raycaster, mouseVector;
 
 // Grounded project data from your resume
 const experienceMatrix = [
@@ -12,6 +11,10 @@ const experienceMatrix = [
 ];
 
 function initSpatialScene() {
+    // 0. Raycasting helpers (THREE is ready by DOMContentLoaded)
+    raycaster = new THREE.Raycaster();
+    mouseVector = new THREE.Vector2();
+
     // 1. Core Scene Setup
     scene = new THREE.Scene();
     scene.fog = new THREE.FogExp2(0x02040a, 0.03);
