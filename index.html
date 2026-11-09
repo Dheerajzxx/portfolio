@@ -3,48 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dheeraj Kumar | Full-Stack Core Engine</title>
-    <!-- Tailwind CSS for lightweight positioning -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Dheeraj Kumar — Portfolio Zine</title>
+    <meta name="description" content="A zine-style portfolio for Dheeraj Kumar, full stack developer with 5+ years of experience building secure web products.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[#02040a] text-slate-200 overflow-hidden font-mono antialiased select-none">
+<body>
+    <div class="page">
+        <header class="masthead">
+            <div class="issue-line">
+                <span>DK · A small portfolio zine</span>
+                <span>Vol. 01 · Hazaribagh, IN</span>
+                <span>Est. 2021</span>
+            </div>
 
-    <!-- WebGL Canvas for Fullscreen 3D Graphics -->
-    <canvas id="3d-scene" class="fixed inset-0 w-full h-full z-10 focus:outline-none"></canvas>
+            <div class="title-row">
+                <h1 class="masthead-title"><span>Dheeraj</span> <span class="last">Kumar</span></h1>
+                <div class="stamp masthead-stamp" aria-hidden="true">
+                    <span>Full stack</span>
+                    <span>developer</span>
+                    <strong>5+ yrs</strong>
+                </div>
+            </div>
 
-    <!-- Holographic Ambient Telemetry Overlay -->
-    <div class="pointer-events-none fixed inset-0 p-6 flex flex-col justify-between z-30 class-hud-lines">
-        <div class="flex justify-between items-start">
+            <div class="sub-row">
+                <p class="tagline">Notes on building secure, fast, unglamorous web software.</p>
+                <nav class="nav" aria-label="Primary">
+                    <a href="#work">Work</a>
+                    <a href="#about">About</a>
+                    <a href="#stack">Stack</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="intro" aria-label="Introduction">
+                <div class="intro-main">
+                    <span class="hand intro-kicker">hello, I'm Dheeraj <span aria-hidden="true">↓</span></span>
+                    <h2 class="intro-title">I build web products that <span class="highlight">hold up</span> in production.</h2>
+                    <p class="intro-copy">Secure apps, PWAs, dashboards and high-throughput APIs — for government portals, marketplaces, hospitals and mass-scale events. Five years of shipping, maintaining and fixing things that matter.</p>
+                    <div class="intro-tags" aria-label="Quick facts">
+                        <span>5+ years</span>
+                        <span>20+ products</span>
+                        <span>4 industries</span>
+                        <span>Remote-friendly</span>
+                    </div>
+                </div>
+
+                <aside class="index-card" aria-label="The short version">
+                    <span class="tape tape-yellow" aria-hidden="true"></span>
+                    <span class="card-label">THE SHORT VERSION</span>
+                    <p>Full stack developer. Laravel &amp; Node on the back, Vue / Nuxt / Next / React on the front. PostgreSQL underneath. Tests around the sharp bits.</p>
+                    <ul class="quick-list">
+                        <li>5+ years in production</li>
+                        <li>Government · commerce · health · events</li>
+                        <li>AI-assisted, zero-regression workflows</li>
+                    </ul>
+                    <span class="hand card-note">currently open to work <span aria-hidden="true">↗</span></span>
+                </aside>
+            </section>
+
+            <div class="cut-line" aria-hidden="true"><span>✂</span></div>
+
+            <section class="work" id="work">
+                <div class="section-head">
+                    <div>
+                        <span class="section-label">01 / Clippings</span>
+                        <h2>Selected work</h2>
+                    </div>
+                    <div class="tabs" id="zine-filters" role="group" aria-label="Filter projects by sector">
+                        <button class="tab is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+                        <button class="tab" type="button" data-filter="government" aria-pressed="false">Gov</button>
+                        <button class="tab" type="button" data-filter="ecommerce" aria-pressed="false">Shop</button>
+                        <button class="tab" type="button" data-filter="healthcare" aria-pressed="false">Health</button>
+                        <button class="tab" type="button" data-filter="events" aria-pressed="false">Events</button>
+                    </div>
+                </div>
+
+                <p class="hand section-note">cut, paste, ship — a few favourites from the pile.</p>
+
+                <div class="clippings" id="zine-work" aria-live="polite"></div>
+            </section>
+
+            <div class="cut-line" aria-hidden="true"><span>✂</span></div>
+
+            <section class="about" id="about">
+                <div class="notebook">
+                    <span class="section-label">02 / About</span>
+                    <h2>Production software, not demos.</h2>
+                    <p class="lede">I turn messy requirements into reliable, maintainable products — and care about clean APIs, tested flows and interfaces that stay fast.</p>
+                    <p>My work sits across Laravel and Node.js on the backend, Vue, Nuxt, Next.js and React on the frontend, with PostgreSQL, MySQL and Redis underneath. I have shipped for e-commerce, government, healthcare, events, logistics and education teams.</p>
+                    <p>Lately I work with Claude Code and agents, using strict unit tests and isolated real-API flows to keep builds honest.</p>
+                    <span class="hand signature">— Dheeraj</span>
+                </div>
+
+                <aside class="field-notes">
+                    <span class="tape tape-blue" aria-hidden="true"></span>
+                    <h3>Field notes</h3>
+                    <ul>
+                        <li>Backend first: PHP, Laravel, Node, Postgres.</li>
+                        <li>Frontend: Vue / Nuxt, Next.js, React.</li>
+                        <li>Likes: clean APIs, fast pages, real tests.</li>
+                        <li>Dislikes: mystery state and unreviewed deploys.</li>
+                        <li>Based in Hazaribagh. Works anywhere.</li>
+                    </ul>
+                    <span class="stamp field-stamp" aria-hidden="true">ships<br>things</span>
+                </aside>
+            </section>
+
+            <div class="cut-line" aria-hidden="true"><span>✂</span></div>
+
+            <section class="stack" id="stack">
+                <div class="section-head">
+                    <div>
+                        <span class="section-label">03 / Supplies</span>
+                        <h2>Tools of the trade</h2>
+                    </div>
+                    <p class="hand section-note">nothing fancy. just reliable.</p>
+                </div>
+
+                <div class="stack-grid" id="zine-stack"></div>
+            </section>
+
+            <div class="cut-line" aria-hidden="true"><span>✂</span></div>
+
+            <section class="contact" id="contact">
+                <div class="postcard">
+                    <span class="postmark" aria-hidden="true">
+                        <span>HAZARIBAGH</span>
+                        <span>INDIA</span>
+                    </span>
+                    <div class="postcard-body">
+                        <span class="section-label">04 / Say hello</span>
+                        <h2>Have a problem worth solving?</h2>
+                        <p>Open to full-time roles and selective freelance work. Bring a real problem, a tight deadline, or a codebase that needs a steady hand.</p>
+                        <a class="email" href="mailto:dheerajzxx@gmail.com">dheerajzxx@gmail.com <span aria-hidden="true">↗</span></a>
+                        <div class="contact-meta">
+                            <a href="tel:+916200893152">+91 6200893152</a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a>
+                            <span>Hazaribagh, India</span>
+                        </div>
+                    </div>
+                    <div class="postage" aria-hidden="true">
+                        <span class="postage-inner"><strong>DK</strong><small>5+ yrs</small></span>
+                    </div>
+                    <span class="hand postscript">P.S. the fastest way to reach me is email.</span>
+                </div>
+            </section>
+        </main>
+
+        <footer class="colophon">
             <div>
-                <h1 class="text-cyan-400 font-bold tracking-widest text-xs uppercase animate-pulse">SYSTEM_ENGINE // DHEERAJ_KUMAR</h1>
-                <p class="text-[9px] text-slate-500">5+ YR EXP // CORE: LARAVEL · NODE · VUE · NEXT</p>
+                <span>© <span id="year">2026</span> Dheeraj Kumar</span>
+                <span>Zine edition · HTML, CSS &amp; a glue stick</span>
             </div>
-            <div class="text-right text-[9px] text-slate-400">
-                <span id="utc-clock">TIMESTAMP: SYSTEM READY</span>
-            </div>
-        </div>
-        
-        <!-- Interactive Overlay: Displays only when a 3D Node is clicked -->
-        <div class="w-full max-w-xl mx-auto mb-12 pointer-events-auto">
-            <div id="sector-display" class="glass-overlay p-5 rounded-lg border border-cyan-500/20 translate-y-10 opacity-0 transition-all duration-500 hidden">
-                <!-- Javascript will inject production details here dynamically -->
-            </div>
-        </div>
+            <span class="hand">thanks for reading.</span>
+        </footer>
     </div>
 
-    <!-- Import official Three.js framework as an ES module -->
-    <script type="importmap">
-    {
-        "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.min.js"
-        }
-    }
-    </script>
-    <script type="module">
-        import * as THREE from 'three';
-        window.THREE = THREE;
-    </script>
+    <script src="js/data.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
