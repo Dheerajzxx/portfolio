@@ -7,6 +7,7 @@
     var workGrid = document.getElementById('zine-work');
     var stackGrid = document.getElementById('zine-stack');
     var filters = document.getElementById('zine-filters');
+    var workStatus = document.getElementById('work-status');
     var currentFilter = 'all';
     var rotations = ['-1.2deg', '0.9deg', '-0.4deg', '1.1deg', '-0.8deg', '0.5deg'];
 
@@ -26,7 +27,7 @@
         clip.style.setProperty('--delay', (index * 40) + 'ms');
 
         var link = project.link
-            ? '<a class="clip-link" href="' + escapeHtml(project.link) + '" target="_blank" rel="noopener">Read the clip <span aria-hidden="true">↗</span></a>'
+            ? '<a class="clip-link" href="' + escapeHtml(project.link) + '" target="_blank" rel="noopener noreferrer">Read the clip <span aria-hidden="true">↗</span></a>'
             : '<span class="clip-link is-private">Private · ask for the story</span>';
 
         clip.innerHTML =
@@ -42,14 +43,20 @@
         return clip;
     }
 
-    function renderWork() {
+    function renderWork(announce) {
         if (!workGrid) return;
         workGrid.innerHTML = '';
 
+        var visible = 0;
         data.projects.forEach(function (project, index) {
             if (currentFilter !== 'all' && project.sector !== currentFilter) return;
-            workGrid.appendChild(createClip(project, index + 1, workGrid.children.length));
+            workGrid.appendChild(createClip(project, index + 1, visible));
+            visible += 1;
         });
+
+        if (announce && workStatus) {
+            workStatus.textContent = visible + (visible === 1 ? ' project shown.' : ' projects shown.');
+        }
     }
 
     function renderStack() {
@@ -81,13 +88,13 @@
                 tab.classList.toggle('is-active', active);
                 tab.setAttribute('aria-pressed', String(active));
             });
-            renderWork();
+            renderWork(true);
         });
     }
 
     var year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
-    renderWork();
+    renderWork(false);
     renderStack();
 })();

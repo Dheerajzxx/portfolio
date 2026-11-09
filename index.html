@@ -3,14 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dheeraj Kumar — Portfolio Zine</title>
-    <meta name="description" content="A zine-style portfolio for Dheeraj Kumar, full stack developer with 5+ years of experience building secure web products.">
+    <title>Dheeraj Kumar — Full Stack Developer</title>
+    <meta name="description" content="Dheeraj Kumar is a full stack developer with 5+ years of experience building secure Laravel, Node.js, Vue/Nuxt and Next.js products for government, commerce, healthcare, events and education.">
+    <meta name="author" content="Dheeraj Kumar">
+    <meta name="theme-color" content="#efe6d6">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.png" type="image/png" sizes="180x180">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dheeraj Kumar — Full Stack Developer">
+    <meta property="og:description" content="5+ years shipping secure web apps, PWAs, dashboards and APIs across government, commerce, healthcare, events and education.">
+    <meta property="og:image" content="og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dheeraj Kumar — Full Stack Developer">
+    <meta name="twitter:description" content="5+ years shipping secure web apps, PWAs, dashboards and APIs.">
+    <meta name="twitter:image" content="og-image.png">
+    <!-- After the first deploy, replace the two og:image/twitter:image values above with your full GitHub Pages URL, e.g. https://USERNAME.github.io/REPO/og-image.png, and add <meta property="og:url" content="https://USERNAME.github.io/REPO/">. -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&amp;family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dheeraj Kumar",
+        "jobTitle": "Full Stack Developer",
+        "email": "mailto:dheerajzxx@gmail.com",
+        "telephone": "+91-6200893152",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Hazaribagh",
+            "addressRegion": "Jharkhand",
+            "addressCountry": "IN"
+        },
+        "sameAs": ["https://linkedin.com/in/dheerajzxx"],
+        "knowsAbout": ["Laravel", "PHP", "Node.js", "Express.js", "Vue.js", "Nuxt.js", "Next.js", "React", "PostgreSQL", "MySQL", "Redis", "REST APIs"]
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <div class="page">
         <header class="masthead">
             <div class="issue-line">
@@ -33,13 +71,15 @@
                 <nav class="nav" aria-label="Primary">
                     <a href="#work">Work</a>
                     <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
                     <a href="#stack">Stack</a>
                     <a href="#contact">Contact</a>
+                    <a class="nav-cv" href="Dheeraj_Kumar_CV.pdf" download>CV ↓</a>
                 </nav>
             </div>
         </header>
 
-        <main>
+        <main id="main-content">
             <section class="intro" aria-label="Introduction">
                 <div class="intro-main">
                     <span class="hand intro-kicker">hello, I'm Dheeraj <span aria-hidden="true">↓</span></span>
@@ -47,8 +87,8 @@
                     <p class="intro-copy">Secure apps, PWAs, dashboards and high-throughput APIs — for government portals, marketplaces, hospitals and mass-scale events. Five years of shipping, maintaining and fixing things that matter.</p>
                     <div class="intro-tags" aria-label="Quick facts">
                         <span>5+ years</span>
-                        <span>20+ products</span>
-                        <span>4 industries</span>
+                        <span>15+ projects</span>
+                        <span>5 industries</span>
                         <span>Remote-friendly</span>
                     </div>
                 </div>
@@ -59,7 +99,7 @@
                     <p>Full stack developer. Laravel &amp; Node on the back, Vue / Nuxt / Next / React on the front. PostgreSQL underneath. Tests around the sharp bits.</p>
                     <ul class="quick-list">
                         <li>5+ years in production</li>
-                        <li>Government · commerce · health · events</li>
+                        <li>Government · commerce · health · events · education</li>
                         <li>AI-assisted, zero-regression workflows</li>
                     </ul>
                     <span class="hand card-note">currently open to work <span aria-hidden="true">↗</span></span>
@@ -80,12 +120,20 @@
                         <button class="tab" type="button" data-filter="ecommerce" aria-pressed="false">Shop</button>
                         <button class="tab" type="button" data-filter="healthcare" aria-pressed="false">Health</button>
                         <button class="tab" type="button" data-filter="events" aria-pressed="false">Events</button>
+                        <button class="tab" type="button" data-filter="education" aria-pressed="false">Edu</button>
+                        <button class="tab" type="button" data-filter="finance" aria-pressed="false">Finance</button>
+                        <button class="tab" type="button" data-filter="integrations" aria-pressed="false">CRM</button>
                     </div>
                 </div>
 
                 <p class="hand section-note">cut, paste, ship — a few favourites from the pile.</p>
 
-                <div class="clippings" id="zine-work" aria-live="polite"></div>
+                <p class="visually-hidden" id="work-status" role="status" aria-live="polite"></p>
+                <div class="clippings" id="zine-work"></div>
+
+                <noscript>
+                    <p class="noscript-note"><strong>JavaScript is off.</strong> The project gallery needs it to load and filter. You can still <a href="Dheeraj_Kumar_CV.pdf" download>download the CV</a> or email <a href="mailto:dheerajzxx@gmail.com">dheerajzxx@gmail.com</a>.</p>
+                </noscript>
             </section>
 
             <div class="cut-line" aria-hidden="true"><span>✂</span></div>
@@ -95,7 +143,7 @@
                     <span class="section-label">02 / About</span>
                     <h2>Production software, not demos.</h2>
                     <p class="lede">I turn messy requirements into reliable, maintainable products — and care about clean APIs, tested flows and interfaces that stay fast.</p>
-                    <p>My work sits across Laravel and Node.js on the backend, Vue, Nuxt, Next.js and React on the frontend, with PostgreSQL, MySQL and Redis underneath. I have shipped for e-commerce, government, healthcare, events, logistics and education teams.</p>
+                    <p>My work sits across Laravel and Node.js on the backend, Vue, Nuxt, Next.js and React on the frontend, with PostgreSQL, MySQL and Redis underneath. I have shipped for e-commerce, government, healthcare, events and education teams.</p>
                     <p>Lately I work with Claude Code and agents, using strict unit tests and isolated real-API flows to keep builds honest.</p>
                     <span class="hand signature">— Dheeraj</span>
                 </div>
@@ -116,10 +164,58 @@
 
             <div class="cut-line" aria-hidden="true"><span>✂</span></div>
 
+            <section class="experience" id="experience">
+                <div class="section-head">
+                    <div>
+                        <span class="section-label">03 / Track record</span>
+                        <h2>Where I've worked</h2>
+                    </div>
+                    <p class="hand section-note">five years, one steady team.</p>
+                </div>
+
+                <div class="experience-grid">
+                    <article class="job-card">
+                        <span class="tape tape-yellow" aria-hidden="true"></span>
+                        <div class="job-head">
+                            <h3>Sentriqo IT Solutions Pvt Ltd</h3>
+                            <span class="job-meta">Nagpur · June 2021 – Present</span>
+                        </div>
+                        <p class="job-role">Full Stack Developer</p>
+                        <ul class="job-points">
+                            <li>Build e-commerce, job application, campaign and booking platforms end to end — APIs, admin panels and PWAs.</li>
+                            <li>Ship real-time features such as video calling, chat and Socket.IO, plus Firebase notifications, Google Maps and payment gateways.</li>
+                            <li>Deliver recent Node.js/PostgreSQL and Next.js builds, with CI through GitHub Actions workflows.</li>
+                        </ul>
+                    </article>
+
+                    <div class="credentials">
+                        <div class="credential-block">
+                            <h3>Education</h3>
+                            <ul>
+                                <li><strong>B.Tech</strong> — RTMNU, Nagpur <span>2011 – 2015</span></li>
+                                <li><strong>HSC</strong> — CBSE, Ramgarh <span>2011</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="credential-block">
+                            <h3>Certification</h3>
+                            <p><strong>AI Coder: Complete Claude Code &amp; Coding Agents Course</strong><br><span>Ligency · Ed Donner (Udemy)</span></p>
+                        </div>
+
+                        <div class="credential-block">
+                            <h3>Soft skills</h3>
+                            <p>Adaptability · Collaboration · Strong work ethic · Problem solving</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cut-line" aria-hidden="true"><span>✂</span></div>
+
             <section class="stack" id="stack">
                 <div class="section-head">
                     <div>
-                        <span class="section-label">03 / Supplies</span>
+                        <span class="section-label">04 / Supplies</span>
                         <h2>Tools of the trade</h2>
                     </div>
                     <p class="hand section-note">nothing fancy. just reliable.</p>
@@ -137,13 +233,16 @@
                         <span>INDIA</span>
                     </span>
                     <div class="postcard-body">
-                        <span class="section-label">04 / Say hello</span>
+                        <span class="section-label">05 / Say hello</span>
                         <h2>Have a problem worth solving?</h2>
                         <p>Open to full-time roles and selective freelance work. Bring a real problem, a tight deadline, or a codebase that needs a steady hand.</p>
-                        <a class="email" href="mailto:dheerajzxx@gmail.com">dheerajzxx@gmail.com <span aria-hidden="true">↗</span></a>
+                        <div class="contact-actions">
+                            <a class="email" href="mailto:dheerajzxx@gmail.com">dheerajzxx@gmail.com <span aria-hidden="true">↗</span></a>
+                            <a class="cv-button" href="Dheeraj_Kumar_CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+                        </div>
                         <div class="contact-meta">
                             <a href="tel:+916200893152">+91 6200893152</a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a>
+                            <a href="https://linkedin.com/in/dheerajzxx" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
                             <span>Hazaribagh, India</span>
                         </div>
                     </div>
